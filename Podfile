@@ -4,6 +4,8 @@ platform :ios, '7.0'
 inhibit_all_warnings!
 
 pod 'Parse'
+pod 'FlatUIKit'
+pod 'DPSmallUtils', :git => 'https://github.com/dnpp73/DPSmallUtils.git'
 
 target :WeeeeeiTests do
   pod 'OCMock'
