@@ -1,0 +1,29 @@
+PODS:
+  - Bolts (1.1.0)
+  - Facebook-iOS-SDK (3.15.0):
+    - Bolts
+  - Kiwi/ARC (2.2.4)
+  - Kiwi/NonARC (2.2.4)
+  - Kiwi/XCTest (2.2.4):
+    - Kiwi/ARC
+    - Kiwi/NonARC
+  - Nocilla (0.8.1)
+  - OCMock (2.2.4)
+  - Parse (1.2.19):
+    - Facebook-iOS-SDK (~> 3.11)
+
+DEPENDENCIES:
+  - Kiwi/XCTest
+  - Nocilla
+  - OCMock
+  - Parse
+
+SPEC CHECKSUMS:
+  Bolts: 91c2af8eae1d44e1dd75946a5b0ae04a43ea43e4
+  Facebook-iOS-SDK: d67a9aa373f28b581e00cefdfd5a1ab8f883ac14
+  Kiwi: c73667f2b84cbf36f1a3830267c5a4ae8dcbd8ba
+  Nocilla: e573c2bf9113c8d77782b695a2f9362b7bc44e72
+  OCMock: 6db79185520e24f9f299548f2b8b07e41d881bd5
+  Parse: ffebaecaddd32cb52671010f81567c298ff93d04
+
+COCOAPODS: 0.33.1
