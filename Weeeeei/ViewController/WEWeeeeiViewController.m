@@ -33,6 +33,8 @@
 {
     [super viewDidLoad];
     self.tableView.tableFooterView = self.tableFooterView;
+    self.tableView.contentInset = UIEdgeInsetsMake(20.0f, 0, 0, 0);
+    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(20.0f, 0, 0, 0);
     self.followingUsers = [[[WEUser currentUser] followingUserNames] mutableCopy];
 }
 
