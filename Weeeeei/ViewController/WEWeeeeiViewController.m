@@ -9,6 +9,7 @@
 #import "WEWeeeeiViewController.h"
 #import <MCSwipeTableViewCell.h>
 #import "WEUser.h"
+#import "WESettingViewController.h"
 
 static CGFloat const CellHeight = 80.0f;
 
@@ -165,6 +166,13 @@ static CGFloat const CellHeight = 80.0f;
     } completion:^(BOOL finished) {
         self.footerButtonsWrapperView.userInteractionEnabled = NO;
         [self.userNameTextField becomeFirstResponder];
+    }];
+}
+
+- (IBAction)tapSetting:(id)sender {
+    WESettingViewController *setting = [[WESettingViewController alloc] initWithNibName:@"WESettingViewController" bundle:nil];
+    [self presentViewController:setting animated:YES completion:^{
+        
     }];
 }
 

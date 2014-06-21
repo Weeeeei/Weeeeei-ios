@@ -26,6 +26,10 @@
 		6A62D3C91954A02000A7C1E4 /* WEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A62D3C81954A02000A7C1E4 /* WEUser.m */; };
 		6A62D3CD1954A73200A7C1E4 /* WEWeeeeiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A62D3CB1954A73200A7C1E4 /* WEWeeeeiViewController.m */; };
 		6A62D3CE1954A73200A7C1E4 /* WEWeeeeiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A62D3CC1954A73200A7C1E4 /* WEWeeeeiViewController.xib */; };
+		6A62D3D41955F99200A7C1E4 /* WESettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A62D3D21955F99200A7C1E4 /* WESettingViewController.m */; };
+		6A62D3D51955F99200A7C1E4 /* WESettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A62D3D31955F99200A7C1E4 /* WESettingViewController.xib */; };
+		6A62D3D91956034700A7C1E4 /* WEUnblockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A62D3D71956034700A7C1E4 /* WEUnblockViewController.m */; };
+		6A62D3DA1956034700A7C1E4 /* WEUnblockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A62D3D81956034700A7C1E4 /* WEUnblockViewController.xib */; };
 		9A2E35D7412044DAB4163532 /* libPods-WeeeeeiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C953B77AA0244DAB7D899BA /* libPods-WeeeeeiTests.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +71,12 @@
 		6A62D3CB1954A73200A7C1E4 /* WEWeeeeiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WEWeeeeiViewController.m; path = ViewController/WEWeeeeiViewController.m; sourceTree = "<group>"; };
 		6A62D3CC1954A73200A7C1E4 /* WEWeeeeiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WEWeeeeiViewController.xib; path = ViewController/WEWeeeeiViewController.xib; sourceTree = "<group>"; };
 		6A62D3D01955352C00A7C1E4 /* WESecrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WESecrets.h; sourceTree = "<group>"; };
+		6A62D3D11955F99200A7C1E4 /* WESettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WESettingViewController.h; path = ViewController/WESettingViewController.h; sourceTree = "<group>"; };
+		6A62D3D21955F99200A7C1E4 /* WESettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WESettingViewController.m; path = ViewController/WESettingViewController.m; sourceTree = "<group>"; };
+		6A62D3D31955F99200A7C1E4 /* WESettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WESettingViewController.xib; path = ViewController/WESettingViewController.xib; sourceTree = "<group>"; };
+		6A62D3D61956034700A7C1E4 /* WEUnblockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WEUnblockViewController.h; path = ViewController/WEUnblockViewController.h; sourceTree = "<group>"; };
+		6A62D3D71956034700A7C1E4 /* WEUnblockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WEUnblockViewController.m; path = ViewController/WEUnblockViewController.m; sourceTree = "<group>"; };
+		6A62D3D81956034700A7C1E4 /* WEUnblockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WEUnblockViewController.xib; path = ViewController/WEUnblockViewController.xib; sourceTree = "<group>"; };
 		7A8DAE0A7632462988EA2904 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B447DB565C824002A3CA075A /* Pods-WeeeeeiTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeeeeeiTests.xcconfig"; path = "Pods/Pods-WeeeeeiTests.xcconfig"; sourceTree = "<group>"; };
 		FB79538BB431454E87B32AE7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -195,6 +205,12 @@
 				6A62D3CA1954A73200A7C1E4 /* WEWeeeeiViewController.h */,
 				6A62D3CB1954A73200A7C1E4 /* WEWeeeeiViewController.m */,
 				6A62D3CC1954A73200A7C1E4 /* WEWeeeeiViewController.xib */,
+				6A62D3D11955F99200A7C1E4 /* WESettingViewController.h */,
+				6A62D3D21955F99200A7C1E4 /* WESettingViewController.m */,
+				6A62D3D31955F99200A7C1E4 /* WESettingViewController.xib */,
+				6A62D3D61956034700A7C1E4 /* WEUnblockViewController.h */,
+				6A62D3D71956034700A7C1E4 /* WEUnblockViewController.m */,
+				6A62D3D81956034700A7C1E4 /* WEUnblockViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -286,7 +302,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A62D3DA1956034700A7C1E4 /* WEUnblockViewController.xib in Resources */,
 				6A62D3CE1954A73200A7C1E4 /* WEWeeeeiViewController.xib in Resources */,
+				6A62D3D51955F99200A7C1E4 /* WESettingViewController.xib in Resources */,
 				6A62D399195494B700A7C1E4 /* InfoPlist.strings in Resources */,
 				6A62D3BE1954967500A7C1E4 /* Settings.bundle in Resources */,
 				6A62D3C619549AAC00A7C1E4 /* WERegistrationViewController.xib in Resources */,
@@ -373,8 +391,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A62D39F195494B700A7C1E4 /* WEAppDelegate.m in Sources */,
+				6A62D3D91956034700A7C1E4 /* WEUnblockViewController.m in Sources */,
 				6A62D39B195494B700A7C1E4 /* main.m in Sources */,
 				6A62D3C91954A02000A7C1E4 /* WEUser.m in Sources */,
+				6A62D3D41955F99200A7C1E4 /* WESettingViewController.m in Sources */,
 				6A62D3CD1954A73200A7C1E4 /* WEWeeeeiViewController.m in Sources */,
 				6A62D3C519549AAC00A7C1E4 /* WERegistrationViewController.m in Sources */,
 			);

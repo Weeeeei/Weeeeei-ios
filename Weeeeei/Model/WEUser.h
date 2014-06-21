@@ -45,6 +45,7 @@
 - (void)addBlock:(NSString *)userName complete:(void (^)(void))complete;
 - (void)removeBlock:(NSString *)userName complete:(void (^)(void))complete;
 - (void)isBlockedFromUser:(NSString *)userName complete:(void (^)(BOOL blocked))complete;
+- (void)allBlockedUserWithComplete:(void (^)(NSArray *blocked))complete;
 
 - (void)sendWeeeeeiToUserName:(NSString *)userName complete:(void (^)(BOOL succeeded))complete;
 - (void)sendWeeeeeiToUser:(WEUser *)user complete:(void (^)(BOOL succeeded))complete;

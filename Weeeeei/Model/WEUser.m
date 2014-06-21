@@ -137,6 +137,24 @@ static NSString * const FollowingUserKey = @"following";
     }];
 }
 
+- (void)allBlockedUserWithComplete:(void (^)(NSArray *))complete
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Block"];
+    [query whereKey:@"user" equalTo:self.userData];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        NSMutableArray *userNames = [@[] mutableCopy];
+        for (int i = 0; i < [objects count]; i++) {
+            PFObject *block = objects[i];
+            [userNames addObject:block[@"username"]];
+        }
+        if (error) {
+            complete(@[]);
+        }else{
+            complete(userNames);
+        }
+    }];
+}
+
 - (void)isBlockedFromUser:(NSString *)userName complete:(void (^)(BOOL))complete
 {
     PFUser *user = [WEUser findPFUserByName:userName];
