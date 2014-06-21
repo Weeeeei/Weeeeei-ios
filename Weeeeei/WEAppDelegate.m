@@ -7,26 +7,29 @@
 //
 
 #import <Parse/Parse.h>
+#import "WEUser.h"
 #import "WEAppDelegate.h"
 #import "WERegistrationViewController.h"
+#import "WEWeeeeiViewController.h"
+#import "WESecrets.h"
 
 @implementation WEAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
-                                                    UIRemoteNotificationTypeAlert|
-                                                    UIRemoteNotificationTypeSound];
-
-    
+    [Parse setApplicationId:PARSE_APP_ID
+                  clientKey:PARSE_CLIENT_ID];
+        
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    
-    WERegistrationViewController *viewControlelr = [[WERegistrationViewController alloc] initWithNibName:@"WERegistrationViewController" bundle:nil];
-    self.window.rootViewController = viewControlelr;
-    
+    if ([WEUser currentUser]) {
+        WEWeeeeiViewController *weeeeiViewController = [[WEWeeeeiViewController alloc] initWithNibName:@"WEWeeeeiViewController" bundle:nil];
+        self.window.rootViewController = weeeeiViewController;
+    }else{
+        WERegistrationViewController *viewControlelr = [[WERegistrationViewController alloc] initWithNibName:@"WERegistrationViewController" bundle:nil];
+        self.window.rootViewController = viewControlelr;
+    }
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -54,8 +57,13 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
+    WEUser *user = [WEUser currentUser];
+    if (!user) {
+        return;
+    }
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation addUniqueObject:user.userName forKey:@"channels"];
     [currentInstallation saveInBackground];
 }
 

@@ -10,6 +10,8 @@
 
 @interface WEUser : NSObject
 
+@property (nonatomic, readonly) NSString *userName;
+
 /**
  *  create new user by username
  *
@@ -36,4 +38,14 @@
  */
 + (WEUser *)findByUserName:(NSString *)userName;
 
+- (void)addFollowing:(NSString *)userName;
+- (void)removeFollowing:(NSString *)userName;
+- (NSArray *)followingUserNames;
+
+- (void)addBlock:(NSString *)userName complete:(void (^)(void))complete;
+- (void)removeBlock:(NSString *)userName complete:(void (^)(void))complete;
+- (void)isBlockedFromUser:(NSString *)userName complete:(void (^)(BOOL blocked))complete;
+
+- (void)sendWeeeeeiToUserName:(NSString *)userName complete:(void (^)(BOOL succeeded))complete;
+- (void)sendWeeeeeiToUser:(WEUser *)user complete:(void (^)(BOOL succeeded))complete;
 @end

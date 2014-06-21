@@ -24,6 +24,8 @@
 		6A62D3C519549AAC00A7C1E4 /* WERegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A62D3C319549AAC00A7C1E4 /* WERegistrationViewController.m */; };
 		6A62D3C619549AAC00A7C1E4 /* WERegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A62D3C419549AAC00A7C1E4 /* WERegistrationViewController.xib */; };
 		6A62D3C91954A02000A7C1E4 /* WEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A62D3C81954A02000A7C1E4 /* WEUser.m */; };
+		6A62D3CD1954A73200A7C1E4 /* WEWeeeeiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A62D3CB1954A73200A7C1E4 /* WEWeeeeiViewController.m */; };
+		6A62D3CE1954A73200A7C1E4 /* WEWeeeeiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A62D3CC1954A73200A7C1E4 /* WEWeeeeiViewController.xib */; };
 		9A2E35D7412044DAB4163532 /* libPods-WeeeeeiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C953B77AA0244DAB7D899BA /* libPods-WeeeeeiTests.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,10 @@
 		6A62D3C419549AAC00A7C1E4 /* WERegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WERegistrationViewController.xib; path = ViewController/WERegistrationViewController.xib; sourceTree = "<group>"; };
 		6A62D3C71954A02000A7C1E4 /* WEUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WEUser.h; path = Model/WEUser.h; sourceTree = "<group>"; };
 		6A62D3C81954A02000A7C1E4 /* WEUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WEUser.m; path = Model/WEUser.m; sourceTree = "<group>"; };
+		6A62D3CA1954A73200A7C1E4 /* WEWeeeeiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WEWeeeeiViewController.h; path = ViewController/WEWeeeeiViewController.h; sourceTree = "<group>"; };
+		6A62D3CB1954A73200A7C1E4 /* WEWeeeeiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WEWeeeeiViewController.m; path = ViewController/WEWeeeeiViewController.m; sourceTree = "<group>"; };
+		6A62D3CC1954A73200A7C1E4 /* WEWeeeeiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WEWeeeeiViewController.xib; path = ViewController/WEWeeeeiViewController.xib; sourceTree = "<group>"; };
+		6A62D3D01955352C00A7C1E4 /* WESecrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WESecrets.h; sourceTree = "<group>"; };
 		7A8DAE0A7632462988EA2904 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B447DB565C824002A3CA075A /* Pods-WeeeeeiTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeeeeeiTests.xcconfig"; path = "Pods/Pods-WeeeeeiTests.xcconfig"; sourceTree = "<group>"; };
 		FB79538BB431454E87B32AE7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 				6A62D3BF195498B600A7C1E4 /* Models */,
 				6A62D39D195494B700A7C1E4 /* WEAppDelegate.h */,
 				6A62D39E195494B700A7C1E4 /* WEAppDelegate.m */,
+				6A62D3D01955352C00A7C1E4 /* WESecrets.h */,
 				6A62D3A0195494B700A7C1E4 /* Images.xcassets */,
 				6A62D395195494B700A7C1E4 /* Supporting Files */,
 			);
@@ -185,6 +192,9 @@
 				6A62D3C219549AAC00A7C1E4 /* WERegistrationViewController.h */,
 				6A62D3C319549AAC00A7C1E4 /* WERegistrationViewController.m */,
 				6A62D3C419549AAC00A7C1E4 /* WERegistrationViewController.xib */,
+				6A62D3CA1954A73200A7C1E4 /* WEWeeeeiViewController.h */,
+				6A62D3CB1954A73200A7C1E4 /* WEWeeeeiViewController.m */,
+				6A62D3CC1954A73200A7C1E4 /* WEWeeeeiViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -276,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A62D3CE1954A73200A7C1E4 /* WEWeeeeiViewController.xib in Resources */,
 				6A62D399195494B700A7C1E4 /* InfoPlist.strings in Resources */,
 				6A62D3BE1954967500A7C1E4 /* Settings.bundle in Resources */,
 				6A62D3C619549AAC00A7C1E4 /* WERegistrationViewController.xib in Resources */,
@@ -364,6 +375,7 @@
 				6A62D39F195494B700A7C1E4 /* WEAppDelegate.m in Sources */,
 				6A62D39B195494B700A7C1E4 /* main.m in Sources */,
 				6A62D3C91954A02000A7C1E4 /* WEUser.m in Sources */,
+				6A62D3CD1954A73200A7C1E4 /* WEWeeeeiViewController.m in Sources */,
 				6A62D3C519549AAC00A7C1E4 /* WERegistrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,10 +494,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yuuki Matsumoto (8LPWKSRVPG)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Weeeeei/Weeeeei-Prefix.pch";
 				INFOPLIST_FILE = "Weeeeei/Weeeeei-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8382073E-3022-4F2C-B325-642FA2B40304";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -496,10 +510,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yuuki Matsumoto (62M699F3DX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Weeeeei/Weeeeei-Prefix.pch";
 				INFOPLIST_FILE = "Weeeeei/Weeeeei-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "FE8BA976-C142-4FA0-831E-42CB7AA9595F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
