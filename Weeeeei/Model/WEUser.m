@@ -160,7 +160,16 @@ static NSString * const FollowingUserKey = @"following";
 
 - (void)blockObjectForUserName:(NSString *)userName complete:(void (^)(PFObject *block))complete
 {
-    return;
+    PFQuery *query = [PFQuery queryWithClassName:@"Block"];
+    [query whereKey:@"user" equalTo:self.userData];
+    [query whereKey:@"username" equalTo:userName];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error || [objects count] == 0) {
+            complete(nil);
+        }else{
+            complete([objects firstObject]);
+        }
+    }];
 }
 
 - (void)sendWeeeeeiToUserName:(NSString *)userName complete:(void (^)(BOOL))complete

@@ -9,6 +9,7 @@ PODS:
   - Kiwi/XCTest (2.2.4):
     - Kiwi/ARC
     - Kiwi/NonARC
+  - MCSwipeTableViewCell (2.1.0)
   - Nocilla (0.8.1)
   - OCMock (2.2.4)
   - Parse (1.2.19):
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - DPSmallUtils (from `https://github.com/dnpp73/DPSmallUtils.git`)
   - FlatUIKit
   - Kiwi/XCTest
+  - MCSwipeTableViewCell
   - Nocilla
   - OCMock
   - Parse
@@ -32,6 +34,7 @@ SPEC CHECKSUMS:
   Facebook-iOS-SDK: d67a9aa373f28b581e00cefdfd5a1ab8f883ac14
   FlatUIKit: edc1ed0c130687dc64a10e45851cc58925f6893d
   Kiwi: c73667f2b84cbf36f1a3830267c5a4ae8dcbd8ba
+  MCSwipeTableViewCell: 713086e29ce3c2171a0102fc594bf583fa7dd323
   Nocilla: e573c2bf9113c8d77782b695a2f9362b7bc44e72
   OCMock: 6db79185520e24f9f299548f2b8b07e41d881bd5
   Parse: ffebaecaddd32cb52671010f81567c298ff93d04

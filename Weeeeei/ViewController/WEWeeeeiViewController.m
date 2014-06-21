@@ -7,7 +7,10 @@
 //
 
 #import "WEWeeeeiViewController.h"
+#import <MCSwipeTableViewCell.h>
 #import "WEUser.h"
+
+static CGFloat const CellHeight = 80.0f;
 
 @interface WEWeeeeiViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UIView *tableFooterView;
@@ -55,18 +58,63 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44.0f;
+    return CellHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString * cellIdentifier = @"cell";
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    MCSwipeTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[MCSwipeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell.separatorInset = UIEdgeInsetsZero;
+        [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
+        cell.contentView.backgroundColor = [UIColor whiteColor];
     }
-    cell.textLabel.text = self.followingUsers[indexPath.row];
+    
+    NSString *userName = self.followingUsers[indexPath.row];
+    
+    cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, CellHeight);
+    cell.textLabel.text = userName;
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:40.0f];
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    
+    [cell setSwipeGestureWithView:[self labelForSwipeView:@"削除"]
+                            color:[UIColor orangeColor]
+                             mode:MCSwipeTableViewCellModeExit
+                            state:MCSwipeTableViewCellState3
+                  completionBlock:^(MCSwipeTableViewCell *cell, MCSwipeTableViewCellState state, MCSwipeTableViewCellMode mode) {
+                      WEUser *user = [WEUser currentUser];
+                      [user removeFollowing:userName];
+                      self.followingUsers = [[user followingUserNames] mutableCopy];
+                      [self.tableView reloadData];
+                  }];
+    
+    [cell setSwipeGestureWithView:[self labelForSwipeView:@"ブロック"]
+                            color:[UIColor redColor]
+                             mode:MCSwipeTableViewCellModeExit
+                            state:MCSwipeTableViewCellState4
+                  completionBlock:^(MCSwipeTableViewCell *cell, MCSwipeTableViewCellState state, MCSwipeTableViewCellMode mode) {
+                      WEUser *user = [WEUser currentUser];
+                      [user addBlock:userName complete:^{
+                          WEUser *currentUser = [WEUser currentUser];
+                          [currentUser removeFollowing:userName];
+                          self.followingUsers = [[currentUser followingUserNames] mutableCopy];
+                          [self.tableView reloadData];
+                      }];
+                  }];
     return cell;
+}
+
+- (UIView *)labelForSwipeView:(NSString *)text
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60.0f, 20.0f)];
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont boldSystemFontOfSize:15.0f];
+    label.text = text;
+    return label;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
