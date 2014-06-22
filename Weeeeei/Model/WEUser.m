@@ -52,8 +52,15 @@ static NSString * const FollowingUserKey = @"following";
 
 + (WEUser *)currentUser
 {
-    PFUser *user = [PFUser currentUser];
-    return [WEUser userFromPFUser:user];
+    static WEUser *_sharedUser = nil;
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        PFUser *user = [PFUser currentUser];
+        _sharedUser = [WEUser userFromPFUser:user];
+    });
+
+    return _sharedUser;
 }
 
 + (PFUser *)findPFUserByName:(NSString *)userName
@@ -118,6 +125,7 @@ static NSString * const FollowingUserKey = @"following";
         }
         PFObject *blockObject = [PFObject objectWithClassName:@"Block"];
         blockObject[@"username"] = userName;
+        blockObject[@"user"] = self.userData;
         [blockObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             complete();
         }];
@@ -198,8 +206,12 @@ static NSString * const FollowingUserKey = @"following";
         return;
     }
     PFPush *push = [[PFPush alloc] init];
+    NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
+                          [NSString stringWithFormat:@"%@: ｳｪｰｲ", self.userName], @"alert",
+                          @"default", @"sound",
+                          nil];
     [push setChannel:userName];
-    [push setMessage:[NSString stringWithFormat:@"%@から。", self.userName]];
+    [push setData:data];
     [push sendPushInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         complete(succeeded);
     }];

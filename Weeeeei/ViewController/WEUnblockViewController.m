@@ -45,7 +45,6 @@ static CGFloat const CellHeight = 80.0f;
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - tableview delegate
@@ -76,7 +75,6 @@ static CGFloat const CellHeight = 80.0f;
         cell.contentView.backgroundColor = [UIColor whiteColor];
     }
     
-    
     cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, CellHeight);
     cell.textLabel.text = self.blockedUserNames[indexPath.row];
     cell.textLabel.font = [UIFont boldSystemFontOfSize:40.0f];
@@ -93,7 +91,6 @@ static CGFloat const CellHeight = 80.0f;
         [self.blockedUserNames removeObject:userName];
     }];
 }
-
 
 - (IBAction)tapDone:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
