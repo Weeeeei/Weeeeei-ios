@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1F7EBFA11EC5412FAF247B8B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8DAE0A7632462988EA2904 /* libPods.a */; };
+		6A11524D195B350C00A568DE /* WETutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A11524B195B350C00A568DE /* WETutorialViewController.m */; };
+		6A11524E195B350C00A568DE /* WETutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A11524C195B350C00A568DE /* WETutorialViewController.xib */; };
 		6A62D38F195494B700A7C1E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A62D38E195494B700A7C1E4 /* Foundation.framework */; };
 		6A62D391195494B700A7C1E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A62D390195494B700A7C1E4 /* CoreGraphics.framework */; };
 		6A62D393195494B700A7C1E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A62D392195494B700A7C1E4 /* UIKit.framework */; };
@@ -45,6 +47,9 @@
 
 /* Begin PBXFileReference section */
 		1C953B77AA0244DAB7D899BA /* libPods-WeeeeeiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeeeeeiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A11524A195B350C00A568DE /* WETutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WETutorialViewController.h; path = ViewController/WETutorialViewController.h; sourceTree = "<group>"; };
+		6A11524B195B350C00A568DE /* WETutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WETutorialViewController.m; path = ViewController/WETutorialViewController.m; sourceTree = "<group>"; };
+		6A11524C195B350C00A568DE /* WETutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WETutorialViewController.xib; path = ViewController/WETutorialViewController.xib; sourceTree = "<group>"; };
 		6A62D38B195494B700A7C1E4 /* Weeeeei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weeeeei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A62D38E195494B700A7C1E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6A62D390195494B700A7C1E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -211,6 +216,9 @@
 				6A62D3D61956034700A7C1E4 /* WEUnblockViewController.h */,
 				6A62D3D71956034700A7C1E4 /* WEUnblockViewController.m */,
 				6A62D3D81956034700A7C1E4 /* WEUnblockViewController.xib */,
+				6A11524A195B350C00A568DE /* WETutorialViewController.h */,
+				6A11524B195B350C00A568DE /* WETutorialViewController.m */,
+				6A11524C195B350C00A568DE /* WETutorialViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -306,6 +314,7 @@
 				6A62D3CE1954A73200A7C1E4 /* WEWeeeeiViewController.xib in Resources */,
 				6A62D3D51955F99200A7C1E4 /* WESettingViewController.xib in Resources */,
 				6A62D399195494B700A7C1E4 /* InfoPlist.strings in Resources */,
+				6A11524E195B350C00A568DE /* WETutorialViewController.xib in Resources */,
 				6A62D3BE1954967500A7C1E4 /* Settings.bundle in Resources */,
 				6A62D3C619549AAC00A7C1E4 /* WERegistrationViewController.xib in Resources */,
 				6A62D3A1195494B700A7C1E4 /* Images.xcassets in Resources */,
@@ -394,6 +403,7 @@
 				6A62D3D91956034700A7C1E4 /* WEUnblockViewController.m in Sources */,
 				6A62D39B195494B700A7C1E4 /* main.m in Sources */,
 				6A62D3C91954A02000A7C1E4 /* WEUser.m in Sources */,
+				6A11524D195B350C00A568DE /* WETutorialViewController.m in Sources */,
 				6A62D3D41955F99200A7C1E4 /* WESettingViewController.m in Sources */,
 				6A62D3CD1954A73200A7C1E4 /* WEWeeeeiViewController.m in Sources */,
 				6A62D3C519549AAC00A7C1E4 /* WERegistrationViewController.m in Sources */,
@@ -535,7 +545,7 @@
 				GCC_PREFIX_HEADER = "Weeeeei/Weeeeei-Prefix.pch";
 				INFOPLIST_FILE = "Weeeeei/Weeeeei-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "FE8BA976-C142-4FA0-831E-42CB7AA9595F";
+				PROVISIONING_PROFILE = "6BBA4704-FE4F-4BE4-B42F-19752BBCA0F5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

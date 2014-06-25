@@ -27,8 +27,9 @@
         WEWeeeeiViewController *weeeeiViewController = [[WEWeeeeiViewController alloc] initWithNibName:@"WEWeeeeiViewController" bundle:nil];
         self.window.rootViewController = weeeeiViewController;
     }else{
-        WERegistrationViewController *viewControlelr = [[WERegistrationViewController alloc] initWithNibName:@"WERegistrationViewController" bundle:nil];
-        self.window.rootViewController = viewControlelr;
+        WERegistrationViewController *viewController = [[WERegistrationViewController alloc] initWithNibName:@"WERegistrationViewController" bundle:nil];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+        self.window.rootViewController = nav;
     }
     
     [self.window makeKeyAndVisible];

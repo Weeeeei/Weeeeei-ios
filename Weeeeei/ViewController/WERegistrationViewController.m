@@ -7,6 +7,7 @@
 //
 
 #import "WERegistrationViewController.h"
+#import "WETutorialViewController.h"
 #import <FlatUIKit.h>
 #import "WEUser.h"
 
@@ -31,6 +32,7 @@
 {
     [super viewDidLoad];
     [self setupViews];
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,7 +63,8 @@
             return;
         }
         // Go to next view
-        ShowObject(user);
+        WETutorialViewController *tutorial = [[WETutorialViewController alloc] initWithNibName:@"WETutorialViewController" bundle:nil];
+        [self.navigationController pushViewController:tutorial animated:YES];
     }];
 }
 

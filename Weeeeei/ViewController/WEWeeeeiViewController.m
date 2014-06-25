@@ -10,6 +10,7 @@
 #import <MCSwipeTableViewCell.h>
 #import "WEUser.h"
 #import "WESettingViewController.h"
+#import "WETutorialViewController.h"
 
 static CGFloat const CellHeight = 80.0f;
 
@@ -45,6 +46,16 @@ static CGFloat const CellHeight = 80.0f;
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
